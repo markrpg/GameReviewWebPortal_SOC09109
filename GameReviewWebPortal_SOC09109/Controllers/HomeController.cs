@@ -9,7 +9,19 @@ namespace GameReviewWebPortal_SOC09109.Models.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult index()
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        // GET: About Us
+        public ActionResult AboutUs()
+        {
+            return View();
+        }
+
+        // GET: Contact Us
+        public ActionResult ContactUs()
         {
             return View();
         }
