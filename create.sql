@@ -1,0 +1,38 @@
+﻿CREATE TABLE dbo.Users
+(
+	[User_ID] VARCHAR(5) NOT NULL PRIMARY KEY,
+	[User_Forename] VARCHAR(20),
+	[User_Surname] VARCHAR(20),
+	[User_E_Address] VARCHAR(20) NOT NULL,
+	[User_Password] BINARY(20) NOT NULL,
+	[Admin_Check] INT
+)
+
+GO
+
+CREATE TABLE dbo.Reviews
+(
+	[Review_ID] VARCHAR(5) NOT NULL PRIMARY KEY,
+	[User_ID] VARCHAR(5) NOT NULL FOREIGN KEY REFERENCES Users(User_ID),
+	[Title] VARCHAR(20) NOT NULL,
+	[Description] VARCHAR(1000) NOT NULL,
+	[Rating] INT NOT NULL,
+	[Comments] VARCHAR(1000)
+
+)
+
+GO
+CREATE TABLE dbo.Game_Information
+(
+[Game_ID] VARCHAR(5) NOT NULL PRIMARY KEY,
+[Review_ID] VARCHAR(5) NOT NULL FOREIGN KEY REFERENCES Reviews(Review_ID),
+[Name] VARCHAR(20) NOT NULL,
+[Genre] VARCHAR(10) NOT NULL,
+[Platforms] VARCHAR(50) NOT NULL,
+[Initial_release_date] DATE NOT NULL,
+[Publisher] VARCHAR(15) NOT NULL,
+[Developer] VARCHAR(15) NOT NULL,
+[AWARDS] VARCHAR(50),
+[Plot] VARCHAR(1000) NOT NULL,
+[Rating] INT NOT NULL
+)
