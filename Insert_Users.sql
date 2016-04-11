@@ -1,0 +1,1 @@
+﻿INSERT INTO Users(User_ID,User_Forename,User_Surname,User_E_Address,User_Password,Admin_Check) VALUES ('USR01','Dan','Hume','40116321@live.napier.ac.uk',HASHBYTES('SHA1','Password'),1);
