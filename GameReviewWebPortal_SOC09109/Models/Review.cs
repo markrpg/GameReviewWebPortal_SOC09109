@@ -19,7 +19,7 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// <summary>
         /// The reviewer
         /// </summary>
-        public User Reviewer { get; set; }
+        public virtual Account Reviewer { get; set; }
 
         /// <summary>
         /// The title of the review
@@ -34,6 +34,6 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// <summary>
         /// The ID of the comments left for this review
         /// </summary>
-        public List<Comment> Comments { get; set; }    
+        public virtual List<Comment> Comments { get; set; }    
     }
 }

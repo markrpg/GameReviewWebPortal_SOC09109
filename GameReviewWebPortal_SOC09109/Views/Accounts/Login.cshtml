@@ -1,0 +1,34 @@
+﻿<!--Using the accounts model-->
+@model GameReviewWebPortal_SOC09109.Models.Account
+
+@{
+    ViewBag.Title = "Login to GRN Game Reviews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Begin the Login Form-->
+@using (Html.BeginForm())
+{
+    <!--Login Validation Text-->
+    @Html.ValidationSummary(true, "Login Failed, Check the Email and Password are Correct.")
+    <div>
+        <fieldset>
+            <legend>Login to GRN Game Reviews</legend>
+            <!--Email Address Label and Text Box-->
+            <div>@Html.LabelFor(u=>u.User_E_Address)</div>
+            <div>@Html.TextBoxFor(u => u.User_E_Address)
+                @Html.ValidationMessageFor(u => u.User_E_Address)</div>
+
+            <!--Password Label and Text Box-->
+            <div>@Html.LabelFor(u => u.User_Password)</div>
+            <div>
+                @Html.TextBoxFor(u => u.User_Password)
+            @Html.ValidationMessageFor(u => u.User_Password)
+        </div>
+        <!-- Submit button-->
+        <input type="submit" value="Login" />
+        </fieldset>
+    </div>
+}
+
+

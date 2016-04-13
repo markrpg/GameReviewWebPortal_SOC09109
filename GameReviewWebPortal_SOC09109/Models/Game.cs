@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -19,7 +20,7 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// <summary>
         /// Reviews for the game
         /// </summary>
-        public List<Review> Reviews { get; set; }
+        public virtual List<Review> Reviews { get; set; }
 
         /// <summary>
         /// Name of the game
@@ -36,6 +37,7 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// </summary>
         public String Platform { get; set; }
 
+        [Display(Name = "Release Date: ")]
         /// <summary>
         /// Date of games release
         /// </summary>
@@ -54,7 +56,7 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// <summary>
         /// List containing all the games rewards
         /// </summary>
-        public List<String> Awards { get; set; }
+        public virtual List<String> Awards { get; set; }
 
         /// <summary>
         /// The games plot

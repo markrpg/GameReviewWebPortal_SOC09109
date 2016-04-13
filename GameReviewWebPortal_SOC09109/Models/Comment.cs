@@ -19,12 +19,12 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// <summary>
         /// The Commentor
         /// </summary>
-        public User Commentor { get; set; }
+        public virtual Account Commentor { get; set; }
 
         /// <summary>
         /// The Review commented on
         /// </summary>
-        public Review Commented_Review { get; set; }
+        public  virtual Review Commented_Review { get; set; }
 
         /// <summary>
         /// Contains the comment

@@ -1,29 +1,20 @@
-﻿using System;
+﻿using GameReviewWebPortal_SOC09109.App_Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace GameReviewWebPortal_SOC09109.Models.Controllers
+namespace GameReviewWebPortal_SOC09109.Controllers
 {
     public class HomeController : Controller
     {
+        private Data db = new Data();
         // GET: Home
         public ActionResult Index()
         {
-            return View();
-        }
-
-        // GET: About Us
-        public ActionResult AboutUs()
-        {
-            return View();
-        }
-
-        // GET: Contact Us
-        public ActionResult ContactUs()
-        {
-            return View();
+            var games = db.Games;
+            return View(games);
         }
     }
 }

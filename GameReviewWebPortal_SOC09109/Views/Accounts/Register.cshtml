@@ -1,0 +1,50 @@
+﻿<!--Using the accounts model-->
+@model GameReviewWebPortal_SOC09109.Models.Account
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Begin the Login Form-->
+@using (Html.BeginForm())
+{
+    <!--Login Validation Text-->
+    @Html.ValidationSummary(true, "Account Creation Failed.")
+    <div>
+        <fieldset>
+            <legend>Create New Account</legend>
+
+            <!--first Name Label and Text Box-->
+            <div>@Html.LabelFor(u => u.User_Forename)</div>
+            <div>
+                @Html.TextBoxFor(u => u.User_Forename)
+                @Html.ValidationMessageFor(u => u.User_Forename)
+            </div>
+
+            <!--Surame Label and Text Box-->
+            <div>@Html.LabelFor(u => u.User_Surname)</div>
+            <div>
+                @Html.TextBoxFor(u => u.User_Surname)
+                @Html.ValidationMessageFor(u => u.User_Surname)
+            </div>
+
+            <!--Email Address Label and Text Box-->
+            <div>@Html.LabelFor(u => u.User_E_Address)</div>
+            <div>
+                @Html.TextBoxFor(u => u.User_E_Address)
+            @Html.ValidationMessageFor(u => u.User_E_Address)
+        </div>
+
+        <!--Password Label and Text Box-->
+        <div>@Html.LabelFor(u => u.User_Password)</div>
+        <div>
+            @Html.TextBoxFor(u => u.User_Password)
+            @Html.ValidationMessageFor(u => u.User_Password)
+        </div>
+        <!-- Submit button-->
+        <input type="submit" value="Register" />
+    </fieldset>
+</div>
+}
+

@@ -17,7 +17,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                <!--Default Button-->
+                @Html.ActionLink("GRN Game Reviews", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+               
+                <!--Check if user logged in show only Logout button-->
+                @if (Request.IsAuthenticated)
+                {
+                    <!--The Users Email Address-->
+                    @Html.ActionLink(@Html.Encode(User.Identity.Name), "Overview", "Accounts", new { area = "" }, new { @class = "navbar-brand" })
+
+                    <!--Logout Button-->
+                    @Html.ActionLink("Logout", "Logout", "Accounts", new { area = "" }, new { @class = "navbar-brand" })
+                }
+                else
+                {
+                    <!--Login Button-->
+                    @Html.ActionLink("Login", "Login", "Accounts", new { area = "" }, new { @class = "navbar-brand" })
+                    <!--Register Button-->
+                    @Html.ActionLink("Register Account", "Register", "Accounts", new { area = "" }, new { @class = "navbar-brand" })
+
+                }
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -30,7 +50,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Copyright GRN Game Reviews</p>
         </footer>
     </div>
 

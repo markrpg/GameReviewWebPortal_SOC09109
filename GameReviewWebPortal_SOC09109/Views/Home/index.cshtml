@@ -1,18 +1,17 @@
-﻿@{
-    Layout = null;
+﻿@model IEnumerable<GameReviewWebPortal_SOC09109.Models.Game>
+
+@{
+    ViewBag.Title = "GRN Game Reviews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Random 50 Games</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GRN - Game Review Napier</title>
-</head>
-<body>
-    <h1>GRN - Game Review Napier</h1>
-    <div>
-       <p>Testing!</p>
-    </div>
-</body>
-</html>
+<ul>
+    @foreach (var game in Model)
+    {
+        <li>@game.Name</li>
+    }
+</ul>
+
+
