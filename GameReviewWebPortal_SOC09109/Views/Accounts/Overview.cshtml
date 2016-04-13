@@ -1,8 +1,55 @@
-﻿
+﻿<!--Using the accounts model-->
+@model GameReviewWebPortal_SOC09109.Models.Account
+
 @{
     ViewBag.Title = "GRN Account Overview";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Overview</h2>
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Forename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Forename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_E_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_E_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Admin_Check)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Admin_Check)
+        </dd>
+
+    </dl>
+</div>
 
