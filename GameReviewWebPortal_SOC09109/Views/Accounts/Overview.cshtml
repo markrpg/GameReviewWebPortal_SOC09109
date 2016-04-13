@@ -6,6 +6,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@using (Html.BeginForm())
+{
+     @Html.AntiForgeryToken()
+
 <div>
     <h4>Account</h4>
     <hr />
@@ -46,10 +50,21 @@
             @Html.DisplayNameFor(model => model.Admin_Check)
         </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Admin_Check)
-        </dd>
-
     </dl>
+
 </div>
+<p>  
+    @Html.ActionLink("Edit Your Profile", "Edit", new { id = Model.AccountID })
+
+</p>
+
+<p> 
+
+<!--Check if user is an admin for access to admin page-->
+@if (Model.Admin_Check == true)
+{
+    @Html.ActionLink("Go to Admin Page", "Admin", "Accounts", new { id = Model.AccountID }, new { })
+}</p>
+
+}
 

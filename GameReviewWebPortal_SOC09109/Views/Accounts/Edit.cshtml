@@ -17,6 +17,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.AccountID)
 
+        <!--Firstname Field-->
         <div class="form-group">
             @Html.LabelFor(model => model.User_Forename, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -25,6 +26,7 @@
             </div>
         </div>
 
+        <!--Surname Field-->
         <div class="form-group">
             @Html.LabelFor(model => model.User_Surname, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -33,6 +35,7 @@
             </div>
         </div>
 
+        <!--Email Address Field-->
         <div class="form-group">
             @Html.LabelFor(model => model.User_E_Address, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -41,6 +44,7 @@
             </div>
         </div>
 
+        <!--Password Field-->
         <div class="form-group">
             @Html.LabelFor(model => model.User_Password, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -49,16 +53,21 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Admin_Check, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Admin_Check)
-                    @Html.ValidationMessageFor(model => model.Admin_Check, "", new { @class = "text-danger" })
+        <!--If admin then allow check and unchecking of admin-->
+        @if (Model.Admin_Check == true)
+        {
+            <div class="form-group">
+                @Html.LabelFor(model => model.Admin_Check, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.Admin_Check)
+                        @Html.ValidationMessageFor(model => model.Admin_Check, "", new { @class = "text-danger" })
+                    </div>
                 </div>
             </div>
-        </div>
+        }
 
+        <!--Save Button-->
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
@@ -68,5 +77,15 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+
+    <!--Check if user is an admin and return to correct place-->
+    @if (Model.Admin_Check == true)
+    {
+        @Html.ActionLink("Back to List", "Index")
+    }
+    else
+    {
+        @Html.ActionLink("Back to Overview", "Overview", new { email = @Html.Encode(User.Identity.Name) })
+    }
+
 </div>

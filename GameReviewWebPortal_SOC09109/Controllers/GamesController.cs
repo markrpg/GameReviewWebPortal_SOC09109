@@ -17,7 +17,7 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         private Data db = new Data();
 
         // GET: Games
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
             return View(db.Games.ToList());
         }

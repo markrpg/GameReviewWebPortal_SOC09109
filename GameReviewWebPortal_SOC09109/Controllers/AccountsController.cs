@@ -22,9 +22,30 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         /// Show all accounts
         /// </summary>
         /// <returns>List of accounts</returns>
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
             return View(db.Accounts.ToList());
+        }
+
+        /// <summary>
+        /// Admin Page 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Admin(int id)
+        {
+
+            //Check if user is admin before continuing
+            //Get accounts from DB where the ID is current ID
+            var account = db.Accounts.FirstOrDefault(a => a.AccountID == id);
+
+            //If the account is admin 
+            if (account.Admin_Check == true)
+            {
+                return View();
+            }
+
+            //Show error if not
+            return HttpNotFound();
         }
 
         /// <summary>
@@ -87,6 +108,7 @@ namespace GameReviewWebPortal_SOC09109.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Account account = db.Accounts.Find(id);
             if (account == null)
             {
@@ -109,7 +131,12 @@ namespace GameReviewWebPortal_SOC09109.Controllers
             {
                 db.Entry(account).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                //If user is admin relist all accounts
+                if (account.Admin_Check == true)
+                {
+                    return RedirectToAction("Index");
+                }
             }
             return View(account);
         }
@@ -159,9 +186,13 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         /// Shows overview of the account.
         /// </summary>
         /// <returns></returns>
-        public ActionResult Overview()
+        public ActionResult Overview(string email)
         {
-            return View();
+            //Get accounts from DB where the email is current email.
+            var account = db.Accounts.FirstOrDefault(a => a.User_E_Address == email);
+
+            //Return users overview page
+            return View(account);
         }
 
         /// <summary>
@@ -187,9 +218,8 @@ namespace GameReviewWebPortal_SOC09109.Controllers
             {
                 //Set authentication cookie
                 FormsAuthentication.SetAuthCookie(accountLogin.User_E_Address, false);
-                
                 //Redirect to accounts overview
-                return RedirectToAction("Overview", "Accounts");
+                return RedirectToAction("Index", "Home");
             }
 
             return View();
@@ -236,7 +266,7 @@ namespace GameReviewWebPortal_SOC09109.Controllers
                 FormsAuthentication.SetAuthCookie(accountRegister.User_E_Address, false);
 
                 //Redirect to accounts overview
-                return RedirectToAction("Overview", "Accounts");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -279,6 +309,27 @@ namespace GameReviewWebPortal_SOC09109.Controllers
             return isValid;
         }
 
+        /// <summary>
+        /// Check if user is an admin
+        /// </summary>
+        /// <param name="userID">User ID to check</param>
+        /// <returns>Returns true if admin, false if not</returns>
+        public bool IsAdmin(string email)
+        {
+            //Local variable for storing admin result
+            bool Admin = false;
+
+            //Get accounts from DB where the ID is current ID
+            var account = db.Accounts.FirstOrDefault(a => a.User_E_Address == email);
+
+            //Check if account exists and if password is valid
+            if (account.Admin_Check == true)
+            {
+                Admin = true;
+            }
+
+            return Admin;
+        }
 
         #endregion
 

@@ -9,7 +9,9 @@ namespace GameReviewWebPortal_SOC09109.Controllers
 {
     public class HomeController : Controller
     {
+        //Database
         private Data db = new Data();
+
         // GET: Home
         public ActionResult Index()
         {

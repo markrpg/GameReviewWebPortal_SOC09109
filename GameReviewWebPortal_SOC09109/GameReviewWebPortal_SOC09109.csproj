@@ -154,6 +154,7 @@
     <Content Include="Views\Accounts\Overview.cshtml" />
     <Content Include="Views\Accounts\Login.cshtml" />
     <Content Include="Views\Accounts\Register.cshtml" />
+    <Content Include="Views\Accounts\Admin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

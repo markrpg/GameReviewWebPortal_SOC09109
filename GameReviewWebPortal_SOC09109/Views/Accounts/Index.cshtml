@@ -1,15 +1,15 @@
-﻿@model IEnumerable<GameReviewWebPortal_SOC09109.Models.Account>
+﻿<!--Admin Page (Index)-->
+@model IEnumerable<GameReviewWebPortal_SOC09109.Models.Account>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -30,7 +30,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.User_Forename)
@@ -48,9 +49,9 @@
             @Html.DisplayFor(modelItem => item.Admin_Check)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AccountID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AccountID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AccountID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.AccountID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.AccountID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.AccountID })
         </td>
     </tr>
 }
