@@ -22,30 +22,28 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         /// Show all accounts
         /// </summary>
         /// <returns>List of accounts</returns>
-        public ActionResult Index(int id)
+        public ActionResult Index()
         {
             return View(db.Accounts.ToList());
         }
 
+
         /// <summary>
-        /// Admin Page 
+        /// Admin Page Validator
         /// </summary>
-        /// <returns></returns>
-        public ActionResult Admin(int id)
+        /// <returns>Returns Account if admin, or error if not</returns>
+        public ActionResult Admin(string AdminEmail)
         {
+            //Get accounts from DB where the email is current email.
+            var account = db.Accounts.FirstOrDefault(a => a.User_E_Address == AdminEmail);
 
-            //Check if user is admin before continuing
-            //Get accounts from DB where the ID is current ID
-            var account = db.Accounts.FirstOrDefault(a => a.AccountID == id);
-
-            //If the account is admin 
-            if (account.Admin_Check == true)
+            if (IsAdmin(AdminEmail))
             {
-                return View();
+                return View(account);
+            } else
+            {
+                return HttpNotFound();
             }
-
-            //Show error if not
-            return HttpNotFound();
         }
 
         /// <summary>

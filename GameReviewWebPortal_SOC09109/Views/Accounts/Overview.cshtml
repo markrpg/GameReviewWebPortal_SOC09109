@@ -6,9 +6,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using (Html.BeginForm())
-{
-     @Html.AntiForgeryToken()
+<!--Check the user is correct-->
+@if (@Html.Encode(User.Identity.Name) == Model.User_E_Address && Request.IsAuthenticated)
+{e
 
 <div>
     <h4>Account</h4>
@@ -63,8 +63,7 @@
 <!--Check if user is an admin for access to admin page-->
 @if (Model.Admin_Check == true)
 {
-    @Html.ActionLink("Go to Admin Page", "Admin", "Accounts", new { id = Model.AccountID }, new { })
+    @Html.ActionLink("Go to Admin Page", "Admin", "Accounts", new { AdminEmail = @Html.Encode(User.Identity.Name) }, new { @class = "navbar-brand" })
 }</p>
 
 }
-

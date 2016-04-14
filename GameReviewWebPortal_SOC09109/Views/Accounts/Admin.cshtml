@@ -6,5 +6,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Admin</h2>
+<!--Check the user is correct-->
+@if (@Html.Encode(User.Identity.Name) == Model.User_E_Address && Request.IsAuthenticated)
+{
+    <h1> Admin</h1>
+}
+
 
