@@ -1,10 +1,11 @@
 ﻿<!--Using the accounts model-->
 @model GameReviewWebPortal_SOC09109.Models.Account
 
-@{
-    ViewBag.Title = "Login to GRN Game Reviews";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+    @{
+       ViewBag.Title = "Login to GRN Game Reviews";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
 
 <!--Begin the Login Form-->
 @using (Html.BeginForm())
@@ -13,7 +14,7 @@
     @Html.ValidationSummary(true, "Login Failed, Check the Email and Password are Correct.")
     <div>
         <fieldset>
-            <legend>Login to GRN Game Reviews</legend>
+            <legend><h4>Login to GRN Game Reviews</h4></legend>
             <!--Email Address Label and Text Box-->
             <div>@Html.LabelFor(u=>u.User_E_Address)</div>
             <div>@Html.TextBoxFor(u => u.User_E_Address)
