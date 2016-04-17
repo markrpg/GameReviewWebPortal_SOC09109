@@ -13,9 +13,10 @@ namespace GameReviewWebPortal_SOC09109.Controllers
 {
     public class GamesController : Controller
     {
-        //
+        //Get Database
         private Data db = new Data();
 
+        #region Game Admin
         // GET: Games
         public ActionResult Index()
         {
@@ -116,6 +117,31 @@ namespace GameReviewWebPortal_SOC09109.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        #endregion
+
+        #region User Pages
+
+        /// <summary>
+        /// Returns individual game by clicking on a game link
+        /// </summary>
+        /// <param name="id">The ID of the game</param>
+        /// <returns>Returns game object if exists, returns no page if not</returns>
+        public ActionResult IndividualGame(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Game game = db.Games.Find(id);
+            if (game == null)
+            {
+                return HttpNotFound();
+            }
+            return View(game);
+        }
+
+        #endregion
 
         protected override void Dispose(bool disposing)
         {
