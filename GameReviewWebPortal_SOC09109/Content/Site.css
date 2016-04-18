@@ -23,25 +23,32 @@ h1 {
     text-decoration:solid;
 }
 
+/*used for titles so far*/
 h2{
     color: #ff5a09;
 }
 
 h3{
-    background-color: #393939;
     text-align: center;
     color: #ff5a09;
-
+    padding-top: 0.5em;
 }
+
 h4{
-        background-color: #393939;
+    background-color: #393939;
     text-align: left;
     color: #ff5a09;
+    padding-top: 0.5em;
+    
+}
+h5{
+    color: #ffffff;
 }
 
 #navbar-header{
     color: #ffffff;
 }
+
 #wrapper
 {
     width: 1280px;
@@ -50,41 +57,56 @@ h4{
     background-color: #393939;
     color: #ff5a09;
 }
+
+/*this is used to control the format, fonts, colours of whats inside the content pane
+    this will have all of the games , individual game details, login details etc
+*/
 #contentPane{
     float: left;
     width: 750px;
     margin: 20px 0 20px 0;
     padding: 10px;
     border: 1px solid  #ff5a09;
+    font-size: 16px;
     color: #ffffff;
 }
 
+/*this is for the side bar and it controls where the sidebar is within the wrapper(right)
+    margin size padding etc
+*/
 #sidebar{
     float: right;
     width: 250px;
     margin: 20px 10px 20px 10px;
     border: 1px solid  #ff5a09;
-    list-style-type: none;
 }
 
 li{
     list-style-type: none;
     width: 261.35px;
-
 }
 
 li:hover{
     color: #ff5a09;
 }
 
-nav > li > a {
-    color:  #ff5a09;
-    background-color:#393939;
-    display: block;
+/*this is used to format the heading about the games in individual game page 
+    (genre, Platform etc)*/
+div > dl > dt > a {
     line-height: 0.6em;
-    padding: 1.05em 0.5em;
-    text-decoration: none;
-    font-size: 22px;
+    padding: 0.4em 0em;
+    font-size: 17px;
+    color: #ff5a09;
+}
+
+/*this is used to format the side bar that contains all of the genres
+    changes colour, padding etc
+*/
+div > li > a {
+    line-height: 0.6em;
+    padding: 0.3em 0.7em;
+    font-size: 16px;
+    color: #ffffff;
 }
 
 #footer{

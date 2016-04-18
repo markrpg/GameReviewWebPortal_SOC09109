@@ -14,18 +14,21 @@
     @Html.ValidationSummary(true, "Login Failed, Check the Email and Password are Correct.")
     <div>
         <fieldset>
-            <legend><h4>Login to GRN Game Reviews</h4></legend>
+            <legend><h2>Login to GRN Game Reviews</h2></legend>
             <!--Email Address Label and Text Box-->
             <div>@Html.LabelFor(u=>u.User_E_Address)</div>
             <div>@Html.TextBoxFor(u => u.User_E_Address)
                 @Html.ValidationMessageFor(u => u.User_E_Address)</div>
-
+            <br />
             <!--Password Label and Text Box-->
             <div>@Html.LabelFor(u => u.User_Password)</div>
             <div>
                 @Html.TextBoxFor(u => u.User_Password)
             @Html.ValidationMessageFor(u => u.User_Password)
         </div>
+            <!--creates a small space between password and the register button-->
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<!--dont worry meant to be colour red-->
         <!-- Submit button-->
         <input type="submit" value="Login" />
         </fieldset>

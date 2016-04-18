@@ -13,7 +13,7 @@
     @Html.ValidationSummary(true, "Account Creation Failed.")
     <div>
         <fieldset>
-            <legend>Create New Account</legend>
+            <legend><h2>Create New Account</h2></legend>
 
             <!--first Name Label and Text Box-->
             <div>@Html.LabelFor(u => u.User_Forename)</div>
@@ -21,6 +21,7 @@
                 @Html.TextBoxFor(u => u.User_Forename)
                 @Html.ValidationMessageFor(u => u.User_Forename)
             </div>
+            <br />
 
             <!--Surame Label and Text Box-->
             <div>@Html.LabelFor(u => u.User_Surname)</div>
@@ -28,6 +29,7 @@
                 @Html.TextBoxFor(u => u.User_Surname)
                 @Html.ValidationMessageFor(u => u.User_Surname)
             </div>
+            <br />
 
             <!--Email Address Label and Text Box-->
             <div>@Html.LabelFor(u => u.User_E_Address)</div>
@@ -35,6 +37,7 @@
                 @Html.TextBoxFor(u => u.User_E_Address)
             @Html.ValidationMessageFor(u => u.User_E_Address)
         </div>
+        <br />
 
         <!--Password Label and Text Box-->
         <div>@Html.LabelFor(u => u.User_Password)</div>
@@ -42,6 +45,9 @@
             @Html.TextBoxFor(u => u.User_Password)
             @Html.ValidationMessageFor(u => u.User_Password)
         </div>
+            <!--creates a small space between password and the register button-->
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<!--dont worry meant to be colour red-->       
         <!-- Submit button-->
         <input type="submit" value="Register" />
     </fieldset>
