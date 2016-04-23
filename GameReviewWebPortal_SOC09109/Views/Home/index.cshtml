@@ -7,11 +7,15 @@
 
 <h3>Random 50 Games</h3>
 
-<ul>
+<body>
     @foreach (var game in Model)
     {
-        <li>@Html.ActionLink(game.Name,"IndividualGame","Games",new { id = game.GameID }, new { })</li>
+        var imageSource = String.Concat("/Images/", game.ImageName);
+        <div>
+            <h2>@Html.ActionLink(game.Name, "IndividualGame", "Games", new { id = game.GameID }, new { })</h2>
+                <img src="@imageSource" alt="gamePicture" style="width:128px;height:128px;" />  
+        </div>
     }
-</ul>
+</body>
 
 

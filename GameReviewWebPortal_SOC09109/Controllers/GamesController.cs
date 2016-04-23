@@ -49,7 +49,7 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "GameID,Name,Genre,Platform,Initial_Release_Date,Publisher,Developer,Plot,Rating")] Game game)
+        public ActionResult Create([Bind(Include = "GameID,Name,Genre,Platform,Initial_Release_Date,Publisher,Developer,Plot,Rating,ImageName")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "GameID,Name,Genre,Platform,Initial_Release_Date,Publisher,Developer,Plot,Rating")] Game game)
+        public ActionResult Edit([Bind(Include = "GameID,Name,Genre,Platform,Initial_Release_Date,Publisher,Developer,Plot,Rating,ImageName")] Game game)
         {
             if (ModelState.IsValid)
             {

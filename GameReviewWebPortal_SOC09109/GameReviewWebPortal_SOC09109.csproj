@@ -106,7 +106,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\black-ops.jpg" />
     <Content Include="Images\pacman.jpg" />
+    <Content Include="Images\res-evil.jpg" />
     <Content Include="Images\star.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
