@@ -64,6 +64,11 @@ namespace GameReviewWebPortal_SOC09109.Models
         public String Plot { get; set; }
 
         /// <summary>
+        /// Returns the games image name
+        /// </summary>
+        public String ImageName { get; set; }
+
+        /// <summary>
         /// The games rating
         /// </summary>
         public int Rating { get; set; }
