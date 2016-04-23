@@ -26,5 +26,14 @@ namespace GameReviewWebPortal_SOC09109.Controllers
             var games = db.Games.Where(a => (a.Genre == genre));
             return View(games);
         }
+
+        [HttpPost]
+        // GET: Home , Search Bar
+        public ActionResult SearchGame(string game)
+        {
+            //Find all games with particular genre
+            var games = db.Games.Where(a => (a.Name.Contains(game)));
+            return View(games);
+        }
     }
 }

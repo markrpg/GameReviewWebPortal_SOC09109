@@ -161,6 +161,7 @@
     <Content Include="Views\Games\IndividualGame.cshtml" />
     <Content Include="Views\Games\AddReview.cshtml" />
     <Content Include="Views\Home\Genres.cshtml" />
+    <Content Include="Views\Home\SearchGame.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

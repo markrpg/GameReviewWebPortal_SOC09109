@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -18,7 +19,7 @@
                     <span class="icon-bar"></span>++
                 </button>
                     <!--Default Button-->
-                    @Html.ActionLink("GRN Game Reviews", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("GRN Game Reviews", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 <!--Check if user logged in show only Logout button-->
                 @if (Request.IsAuthenticated)
                 {
@@ -36,12 +37,17 @@
                     @Html.ActionLink("Register Account", "Register", "Accounts", new { area = "" }, new { @class = "navbar-brand" })
 
                 }
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
+                <!--Search bar-->
+                <div class="navbar-brand">
+                    @using (Html.BeginForm("SearchGame", "Home"))
+            {
+                        @Html.TextBox("game")
+                    }
+                </div>
+
             </div>
         </div>
+
     </div>
     
     <div class="container body-content" id="wrapper">
