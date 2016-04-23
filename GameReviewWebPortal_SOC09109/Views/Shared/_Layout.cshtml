@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Game Review Napier</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
@@ -43,7 +43,6 @@
             </div>
         </div>
     </div>
-
     
     <div class="container body-content" id="wrapper">
         <div id="contentPane">
@@ -54,28 +53,28 @@
             <!--Diferent types of genres-->
             <h3>Genres</h3>
             <li>
-                <a href="">Action</a>
+                @Html.ActionLink("Action", "Genres", "Home", new { genre = "Action" }, new { })
             </li>
             <li>
-                <a href="">Adventure</a>
+                @Html.ActionLink("Adventure", "Genres", "Home", new { genre = "Adventure" }, new { })
             </li>
             <li>
-                <a href="">Fighting</a>
+                @Html.ActionLink("Fighting", "Genres", "Home", new { genre = "Fighting" }, new { })
             </li>
             <li>
-                <a href="">Racing</a>
+                @Html.ActionLink("Racing", "Genres", "Home", new { genre = "Racing" }, new { })
             </li>
             <li>
-                <a href="">RPG</a>
+                @Html.ActionLink("RPG", "Genres", "Home", new { genre = "RPG" }, new { })
             </li>
             <li>
-                <a href="">Sport</a>
+                @Html.ActionLink("Sport", "Genres", "Home", new { genre = "Sport" }, new { })
             </li>
             <li>
-                <a href="">Strategy</a>
+                @Html.ActionLink("Strategy", "Genres", "Home", new { genre = "Strategy"}, new { })
             </li>
             <li>
-                <a href="">Shooter</a>
+                @Html.ActionLink("Shooter", "Genres", "Home", new { genre = "Shooter" }, new { })
             </li>
             <!--this is the editors choices (our top 10 games)-->
         </div>
@@ -87,8 +86,6 @@
         </div>
 
     </div>
-
-
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>

@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2>Title -   @Html.DisplayFor(model => model.Name)</h2>
 <h3>GRN Rating - @Html.DisplayFor(model => model.Rating)/10 <img src="~/Images/star.png" alt="Star photo"/></h3>
 
@@ -64,6 +65,28 @@
 </div>
 <p>
 <!--Review-->
+    <h2>Reviews!</h2>
+<!--Loop around and all all reviews-->
+    @foreach (var review in Model.Reviews)
+    {
+        <hr>
+        <div class= "form-horizontal">
+            <h4>Reviewer: @review.Reviewer</h4>
+            <h4>Title: @review.Title</h4>
+            <h4>Description: @review.Description</h4>
+        </div>
+    }
+    <hr>
+    <!--Check the user is logged in-->
+    @if (Request.IsAuthenticated)
+    {
+    <!--Box to submit review-->
+    @Html.Action("AddReview", "Games", new { id = Model.GameID, reviewer = @Html.Encode(User.Identity.Name)})
     <!--Comments-->
+    }
+    else
+    {
+        <h2>Please login to create a review!</h2>
+    }
 <!--Related Games-->
 </p>

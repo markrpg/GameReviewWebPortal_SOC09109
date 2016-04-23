@@ -46,14 +46,11 @@
             <h5>@Html.DisplayFor(model => model.User_Password)</h5>
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Admin_Check)
-        </dt>
-
         <dd>
             <!--Check if user is an admin for access to admin page-->
             @if (Model.Admin_Check == true)
             {
+
                 @Html.ActionLink("Go to Admin Page", "Admin", "Accounts", new { AdminEmail = @Html.Encode(User.Identity.Name) }, new { @class = "navbar-brand" })
             }
         </dd>

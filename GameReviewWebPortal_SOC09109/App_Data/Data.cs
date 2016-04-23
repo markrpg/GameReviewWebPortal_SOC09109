@@ -22,5 +22,7 @@ namespace GameReviewWebPortal_SOC09109.App_Data
 
         public System.Data.Entity.DbSet<GameReviewWebPortal_SOC09109.Models.Account> Accounts { get; set; }
         public System.Data.Entity.DbSet<GameReviewWebPortal_SOC09109.Models.Game> Games { get; set; }
+
+        public System.Data.Entity.DbSet<GameReviewWebPortal_SOC09109.Models.Review> Reviews { get; set; }
     }
 }

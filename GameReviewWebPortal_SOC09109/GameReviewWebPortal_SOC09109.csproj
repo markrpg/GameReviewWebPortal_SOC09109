@@ -129,7 +129,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Account.cs" />
@@ -160,6 +159,8 @@
     <Content Include="Views\Accounts\Register.cshtml" />
     <Content Include="Views\Accounts\Admin.cshtml" />
     <Content Include="Views\Games\IndividualGame.cshtml" />
+    <Content Include="Views\Games\AddReview.cshtml" />
+    <Content Include="Views\Home\Genres.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

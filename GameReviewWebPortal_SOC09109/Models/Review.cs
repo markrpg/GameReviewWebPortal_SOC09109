@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -17,23 +18,25 @@ namespace GameReviewWebPortal_SOC09109.Models
         public int ReviewID { get; set; }
 
         /// <summary>
-        /// The reviewer
+        /// The reviewer email
         /// </summary>
-        public virtual Account Reviewer { get; set; }
+        public String Reviewer { get; set; }
 
+        [Required]
         /// <summary>
         /// The title of the review
         /// </summary>
         public String Title { get; set; }
 
+        [Required]
         /// <summary>
         /// The description of the review
         /// </summary>
         public String Description { get; set; }
 
         /// <summary>
-        /// The ID of the comments left for this review
+        /// The Reviews game
         /// </summary>
-        public virtual List<Comment> Comments { get; set; }    
+        public virtual Game Game { get; set; } 
     }
 }

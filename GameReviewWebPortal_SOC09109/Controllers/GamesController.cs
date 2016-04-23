@@ -44,7 +44,34 @@ namespace GameReviewWebPortal_SOC09109.Controllers
             return View();
         }
 
-        // POST: Games/Create
+        // GET: Review
+        public ActionResult AddReview()
+        {
+            return View();
+        }
+
+        // POST: Games/AddReview
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddReview([Bind(Include = "Title,Description")] Review review, int id, string reviewer)
+        {
+            if (ModelState.IsValid)
+            {
+                //Find game
+                Game game = db.Games.Find(id);
+                //Set review to game
+                review.Game = game;
+                //Set reviewer email to review
+                review.Reviewer = reviewer;
+                db.Reviews.Add(review);
+                db.SaveChanges();
+            }
+            return null;
+        }
+
+        // POST: Games/AddReview
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -60,6 +87,7 @@ namespace GameReviewWebPortal_SOC09109.Controllers
 
             return View(game);
         }
+
 
         // GET: Games/Edit/5
         public ActionResult Edit(int? id)
