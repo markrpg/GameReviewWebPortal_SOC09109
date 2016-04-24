@@ -106,10 +106,24 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\arkhamK.JPG" />
     <Content Include="Images\black-ops.jpg" />
+    <Content Include="Images\borderlands2.jpg" />
+    <Content Include="Images\dark-souls-2.jpg" />
+    <Content Include="Images\empireTW.jpg" />
+    <Content Include="Images\fifa16.jpg" />
+    <Content Include="Images\forza2.jpg" />
+    <Content Include="Images\goldeneye.jpg" />
+    <Content Include="Images\GT7.png" />
+    <Content Include="Images\GTA5.jpg" />
+    <Content Include="Images\HL2.jpg" />
+    <Content Include="Images\minecraft.jpg" />
     <Content Include="Images\pacman.jpg" />
+    <Content Include="Images\pokemonred.jpg" />
     <Content Include="Images\res-evil.jpg" />
+    <Content Include="Images\skyrim.jpg" />
     <Content Include="Images\star.png" />
+    <Content Include="Images\starcraft_2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -169,7 +183,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DB Scripts\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

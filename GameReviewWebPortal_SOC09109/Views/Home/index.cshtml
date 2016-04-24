@@ -6,6 +6,7 @@
 }
 
 <h3>Random 50 Games</h3>
+<br /><!--give space between the title and first game-->
 
 <body>
     
@@ -14,8 +15,11 @@
     {
         var imageSource = String.Concat("/Images/", game.ImageName);
         <div>
-            <h2>@Html.ActionLink(game.Name, "IndividualGame", "Games", new { id = game.GameID }, new { })</h2>
-                <img src="@imageSource" alt="gamePicture" style="width:128px;height:128px;" />  
+            <h2>
+                <!--puts the image first and on the left before the text-->
+                <img src="@imageSource" alt="gamePicture" style="width:128px;height:128px;" float="left" />
+                 @Html.ActionLink(game.Name, "IndividualGame", "Games", new { id = game.GameID }, new { })
+        </h2>
         </div>
     }
 </body>

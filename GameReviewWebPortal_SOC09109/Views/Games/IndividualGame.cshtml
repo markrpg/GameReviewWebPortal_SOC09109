@@ -4,89 +4,90 @@
     ViewBag.Title = Model.Name;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+            <h2>Title -   @Html.DisplayFor(model => model.Name) </h2>
 
+            <h3>GRN Rating - @Html.DisplayFor(model => model.Rating)/10 
+            <img src="~/Images/star.png" alt="Star photo" style="width:30px; height:30px"/>
+            </h3>
 
-<h2>Title -   @Html.DisplayFor(model => model.Name)</h2>
-<h3>GRN Rating - @Html.DisplayFor(model => model.Rating)/10 <img src="~/Images/star.png" alt="Star photo"/></h3>
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
 
-<div>
-    <hr />
-    <dl class="dl-horizontal">
+                    <dt>
+                        <a>Game Genre: </a>
+                    </dt>
 
-        <dt>
-            <a>Game Genre: </a>
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Genre)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Genre)
-        </dd>
+                    <dt>
+                        <a>Platform: </a>
+                    </dt>
 
-        <dt>
-            <a>Platform: </a>
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Platform)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Platform)
-        </dd>
+                    <dt>
+                        <a>Release Date: </a>
+                    </dt>
 
-        <dt>
-            <a>Release Date: </a>
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Initial_Release_Date)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Initial_Release_Date)
-        </dd>
+                    <dt>
+                        <a>Publisher: </a>
+                    </dt>
 
-        <dt>
-            <a>Publisher: </a>
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Publisher)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Publisher)
-        </dd>
+                    <dt>
+                        <a>Developer: </a>
+                    </dt>
 
-        <dt>
-            <a>Developer: </a>
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Developer)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Developer)
-        </dd>
+                    <dt>
+                        <a>Description: </a>
+                    </dt>
 
-        <dt>
-            <a>Description: </a>
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Plot)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Plot)
-        </dd>
-
-    </dl>
-</div>
-<p>
-<!--Review-->
-    <h2>Reviews!</h2>
-<!--Loop around and all all reviews-->
-    @foreach (var review in Model.Reviews)
-    {
-        <hr>
-        <div class= "form-horizontal">
-            <h4>Reviewer: @review.Reviewer</h4>
-            <h4>Title: @review.Title</h4>
-            <h4>Description: @review.Description</h4>
-        </div>
-    }
-    <hr>
-    <!--Check the user is logged in-->
-    @if (Request.IsAuthenticated)
-    {
+                </dl>
+            </div>
+            <p>
+                <!--Review-->
+                <h2>Reviews Of - @Html.DisplayFor(model => model.Name)</h2> <!--should display reviews and the actual name of the game-->
+                <!--Loop around and all all reviews-->
+                @foreach (var review in Model.Reviews)
+                {
+                    <hr>
+                    <div class="form-horizontal">
+                        <h5>Reviewer: @review.Reviewer</h5>
+                        <h5>Title: @review.Title</h5>
+                        <h5>Description: @review.Description</h5>
+                    </div>
+                }
+                <hr>
+                <!--Check the user is logged in-->
+                @if (Request.IsAuthenticated)
+                {
     <!--Box to submit review-->
-    @Html.Action("AddReview", "Games", new { id = Model.GameID, reviewer = @Html.Encode(User.Identity.Name)})
+                    @Html.Action("AddReview", "Games", new { id = Model.GameID, reviewer = @Html.Encode(User.Identity.Name) })
     <!--Comments-->
-    }
-    else
-    {
-        <h2>Please login to create a review!</h2>
-    }
-<!--Related Games-->
-</p>
+                }
+                else
+                {
+                    <h2>Please login to create a review!</h2>
+                }
+                <!--Related Games-->
+            </p>
