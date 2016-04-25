@@ -114,6 +114,7 @@
     <Content Include="Images\fifa16.jpg" />
     <Content Include="Images\forza2.jpg" />
     <Content Include="Images\goldeneye.jpg" />
+    <Content Include="Images\gow.jpg" />
     <Content Include="Images\GT7.png" />
     <Content Include="Images\GTA5.jpg" />
     <Content Include="Images\HL2.jpg" />
@@ -124,6 +125,7 @@
     <Content Include="Images\skyrim.jpg" />
     <Content Include="Images\star.png" />
     <Content Include="Images\starcraft_2.jpg" />
+    <Content Include="Images\titanfall.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
