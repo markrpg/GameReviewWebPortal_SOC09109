@@ -141,6 +141,8 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Game game = db.Games.Find(id);
+            //Delete reviews of game
+            db.Reviews.RemoveRange(game.Reviews);
             db.Games.Remove(game);
             db.SaveChanges();
             return RedirectToAction("Index");

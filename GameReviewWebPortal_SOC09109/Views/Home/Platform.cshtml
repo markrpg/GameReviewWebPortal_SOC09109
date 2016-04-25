@@ -1,0 +1,23 @@
+﻿@model IEnumerable<GameReviewWebPortal_SOC09109.Models.Game>
+
+@{
+    ViewBag.Title = "GRN Game Reviews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Filtered Games</h3>
+
+<body>
+    
+    <!--Loop around games and add them to the home page-->
+    @foreach (var game in Model)
+    {
+        var imageSource = String.Concat("/Images/", game.ImageName);
+        <div>
+            <h2>@Html.ActionLink(game.Name, "IndividualGame", "Games", new { id = game.GameID }, new { })</h2>
+                <img src="@imageSource" alt="gamePicture" style="width:128px;height:128px;" />  
+        </div>
+    }
+</body>
+
+

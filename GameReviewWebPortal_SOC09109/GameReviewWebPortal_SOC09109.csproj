@@ -176,6 +176,7 @@
     <Content Include="Views\Games\AddReview.cshtml" />
     <Content Include="Views\Home\Genres.cshtml" />
     <Content Include="Views\Home\SearchGame.cshtml" />
+    <Content Include="Views\Home\Platform.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -185,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DB Scripts\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
