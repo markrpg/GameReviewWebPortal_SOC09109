@@ -7,9 +7,17 @@
 }
 
 <!--Check the user is correct-->
-@if (@Html.Encode(User.Identity.Name) == Model.User_E_Address && Request.IsAuthenticated)
+@if (@Html.Encode(User.Identity.Name) == Model.User_E_Address && Request.IsAuthenticated && Model.Admin_Check == true)
 {
-    <h1> Admin</h1>
+    <h1>Admin Controls</h1>
+    <hr>
+    <h2>@Html.ActionLink("Game Management", "Index", "Games", new { email = @Html.Encode(User.Identity.Name) }, new { })</h2>
+    <hr>
+    <h2>@Html.ActionLink("Account Management", "Index", "Accounts", new { email = @Html.Encode(User.Identity.Name) }, new { })</h2>
+}
+else
+{
+    <h1>Admin only page.</h1>
 }
 
 

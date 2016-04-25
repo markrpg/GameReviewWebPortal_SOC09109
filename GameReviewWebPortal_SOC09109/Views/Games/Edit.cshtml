@@ -97,5 +97,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", new { email = @Html.Encode(User.Identity.Name)})
 </div>

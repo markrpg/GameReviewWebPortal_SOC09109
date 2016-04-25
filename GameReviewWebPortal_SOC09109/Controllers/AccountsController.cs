@@ -22,9 +22,22 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         /// Show all accounts
         /// </summary>
         /// <returns>List of accounts</returns>
-        public ActionResult Index()
+        public ActionResult Index(string email)
         {
-            return View(db.Accounts.ToList());
+            //Check email address for admin
+            var account = db.Accounts.Where(a => (a.User_E_Address == email));
+            if (account.Count() > 0)
+            {
+                if (account.First().Admin_Check == true)
+                {
+                    return View(db.Accounts.ToList());
+                }
+                else
+                {
+                    return HttpNotFound();
+                }
+            }
+            return RedirectToAction("Index", "Home");
         }
 
 

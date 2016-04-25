@@ -18,9 +18,22 @@ namespace GameReviewWebPortal_SOC09109.Controllers
 
         #region Game Admin
         // GET: Games
-        public ActionResult Index()
+        public ActionResult Index(string email)
         {
-            return View(db.Games.ToList());
+            //Check email address for admin
+            var account = db.Accounts.Where(a => (a.User_E_Address == email));
+            if (account.Count() > 0)
+            {
+                if (account.First().Admin_Check == true)
+                {
+                    return View(db.Games.ToList());
+                }
+                else
+                {
+                    return HttpNotFound();
+                }
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         // GET: Games/Details/5

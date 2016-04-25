@@ -81,7 +81,7 @@
     <!--Check if user is an admin and return to correct place-->
     @if (Model.Admin_Check == true)
     {
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Back to List", "Index", new { email = @Html.Encode(User.Identity.Name) })
     }
     else
     {
