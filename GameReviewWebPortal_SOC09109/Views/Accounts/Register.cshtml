@@ -42,7 +42,7 @@
         <!--Password Label and Text Box-->
         <div>@Html.LabelFor(u => u.User_Password)</div>
         <div>
-            @Html.TextBoxFor(u => u.User_Password)
+            @Html.PasswordFor(u => u.User_Password)
             @Html.ValidationMessageFor(u => u.User_Password)
         </div>
             <!--creates a small space between password and the register button-->
