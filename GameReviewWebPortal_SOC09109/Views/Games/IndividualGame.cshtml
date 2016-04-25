@@ -64,9 +64,11 @@
 
                 </dl>
             </div>
+            <br />
+            <br />
             <p>
                 <!--Review-->
-                <h2>Reviews Of - @Html.DisplayFor(model => model.Name)</h2> <!--should display reviews and the actual name of the game-->
+                <h2>Reviews Of  @Html.DisplayFor(model => model.Name)</h2> <!--should display reviews and the actual name of the game-->
                 <!--Loop around and all all reviews-->
                 @foreach (var review in Model.Reviews)
                 {
