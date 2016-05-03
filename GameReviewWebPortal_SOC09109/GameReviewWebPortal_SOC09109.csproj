@@ -140,7 +140,6 @@
     <Content Include="Images\wow.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -152,7 +151,6 @@
   <ItemGroup>
     <Compile Include="App_Data\Data.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -163,7 +161,6 @@
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Struct1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

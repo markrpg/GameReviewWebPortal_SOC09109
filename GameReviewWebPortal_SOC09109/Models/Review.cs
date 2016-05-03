@@ -38,17 +38,5 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// The Reviews game
         /// </summary>
         public virtual Game Game { get; set; }
-
-        public CopyOfClass1 UpdateView
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
     }
 }
