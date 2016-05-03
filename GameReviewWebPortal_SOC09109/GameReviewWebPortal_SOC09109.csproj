@@ -191,6 +191,8 @@
     <Content Include="Views\Home\Genres.cshtml" />
     <Content Include="Views\Home\SearchGame.cshtml" />
     <Content Include="Views\Home\Platform.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
