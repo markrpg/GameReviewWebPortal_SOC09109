@@ -52,5 +52,17 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// Used to determine if the user is an admin or not
         /// </summary>
         public bool Admin_Check { get; set; }
+
+        public Class1 UpdateView
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
     }
 }

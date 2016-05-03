@@ -73,5 +73,28 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// </summary>
         public int Rating { get; set; }
 
+        public Copy1OfClass1 UpdateView
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
+        public Copy1OfClass1 UpdateVieww
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
     }
 }

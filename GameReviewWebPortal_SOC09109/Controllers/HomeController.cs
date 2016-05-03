@@ -7,10 +7,27 @@ using System.Web.Mvc;
 
 namespace GameReviewWebPortal_SOC09109.Controllers
 {
+    /// <summary>
+    /// Controller Class HomeController
+    /// By Mark McLaughlin 
+    /// 40200606
+    /// </summary>
     public class HomeController : Controller
     {
-        //Database
+        //Local Database Instance
         private Data db = new Data();
+
+        public Models.Game UpdateModel
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
         // GET: Home
         public ActionResult Index()

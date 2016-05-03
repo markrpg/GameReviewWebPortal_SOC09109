@@ -11,10 +11,39 @@ using GameReviewWebPortal_SOC09109.Models;
 
 namespace GameReviewWebPortal_SOC09109.Controllers
 {
+    /// <summary>
+    /// Controller Class GamesController
+    /// By Mark McLaughlin 
+    /// 40200606
+    /// </summary>
     public class GamesController : Controller
     {
-        //Get Database
+        //Local Database Instance
         private Data db = new Data();
+
+        public Game UpdateModel
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
+        public Review UpdateModell
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
         #region Game Admin
         // GET: Games

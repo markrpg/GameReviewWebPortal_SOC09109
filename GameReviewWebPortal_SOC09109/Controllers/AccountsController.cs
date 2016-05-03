@@ -12,9 +12,27 @@ using System.Web.Security;
 
 namespace GameReviewWebPortal_SOC09109.Controllers
 {
+    /// <summary>
+    /// Controller Class AccountsController
+    /// By Mark McLaughlin 
+    /// 40200606
+    /// </summary>
     public class AccountsController : Controller
     {
+        //Local Database Instance
         private Data db = new Data();
+
+        public Account UpdateModel
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
         #region Admin Pages
 

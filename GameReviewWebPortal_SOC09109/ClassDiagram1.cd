@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Accounts (View)&#xD;&#xA;------------------------&#xD;&#xA;Pages:&#xD;&#xA;Admin.cshtml&#xD;&#xA;Create.cshtml&#xD;&#xA;Delete.cshtml&#xD;&#xA;Edit.cshtml&#xD;&#xA;Index.cshtml&#xD;&#xA;Login.cshtml&#xD;&#xA;Overview.cshtml&#xD;&#xA;Register.cshtml">
+    <Position X="1.783" Y="2.067" Height="1.939" Width="1.417" />
+  </Comment>
+  <Comment CommentText="Games (View)&#xD;&#xA;-------------------------&#xD;&#xA;Pages:&#xD;&#xA;AddReview.cshtml&#xD;&#xA;Create.cshtml&#xD;&#xA;Delete.cshtml&#xD;&#xA;Details.cshtml&#xD;&#xA;Edit.cshtml&#xD;&#xA;Index.cshtml&#xD;&#xA;IndividualGame.cshtml">
+    <Position X="3.783" Y="2.067" Height="1.949" Width="1.486" />
+  </Comment>
+  <Comment CommentText="Home (View)&#xD;&#xA;------------------------&#xD;&#xA;Pages:&#xD;&#xA;AboutUs.cshtml&#xD;&#xA;ContactUs.cshtml&#xD;&#xA;Genres.cshtml&#xD;&#xA;Index.cshtml&#xD;&#xA;Platform.cshtml&#xD;&#xA;SearchGame.cshtml&#xD;&#xA;&#xD;&#xA;">
+    <Position X="5.533" Y="2.067" Height="1.664" Width="1.417" />
+  </Comment>
+  <Class Name="GameReviewWebPortal_SOC09109.Controllers.AccountsController">
+    <Position X="1.5" Y="4.75" Width="2" />
+    <AssociationLine Name="UpdateModel" Type="GameReviewWebPortal_SOC09109.Models.Account">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.093" Y="0.352" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACgRAACAAAAAAQIACAEBAEACCAEQAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountsController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UpdateModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameReviewWebPortal_SOC09109.Controllers.GamesController">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <AssociationLine Name="UpdateModel" Type="GameReviewWebPortal_SOC09109.Models.Game" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.188" Y="7.983" />
+        <Point X="5.188" Y="9.375" />
+        <Point X="5.75" Y="9.375" />
+        <Point X="5.75" Y="9.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="0.388" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="UpdateModell" Type="GameReviewWebPortal_SOC09109.Models.Review">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.084" Y="0.388" Height="0.182" Width="1.051" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACARAACAAAAAAAAAAAEAAEACCAEAAAAABAA=</HashCode>
+      <FileName>Controllers\GamesController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UpdateModel" />
+      <Property Name="UpdateModell" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameReviewWebPortal_SOC09109.Controllers.HomeController">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <AssociationLine Name="UpdateModel" Type="GameReviewWebPortal_SOC09109.Models.Game">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.088" Y="0.401" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAEAAAIAAAAAAAAAAAAACAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UpdateModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameReviewWebPortal_SOC09109.Models.Account">
+    <Position X="1.5" Y="9.75" Width="2" />
+    <AssociationLine Name="UpdateView" Type="GameReviewWebPortal_SOC09109.Class1" ManuallyRouted="true">
+      <Path>
+        <Point X="1.5" Y="10.782" />
+        <Point X="1.045" Y="10.782" />
+        <Point X="1.045" Y="2.331" />
+        <Point X="1.75" Y="2.331" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.757" Y="-1.924" Height="0.182" Width="0.965" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAARAAAAAAAAAAAgCAAAAAAAAAAQAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\Account.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UpdateView" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameReviewWebPortal_SOC09109.Models.Game">
+    <Position X="5.5" Y="9.75" Width="1.5" />
+    <AssociationLine Name="UpdateView" Type="GameReviewWebPortal_SOC09109.Copy1OfClass1" ManuallyRouted="true">
+      <Path>
+        <Point X="7" Y="11.359" />
+        <Point X="7.717" Y="11.359" />
+        <Point X="7.717" Y="2.331" />
+        <Point X="7" Y="2.331" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.841" Y="-1.756" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="UpdateVieww" Type="GameReviewWebPortal_SOC09109.Copy1OfClass1" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.312" Y="12.969" />
+        <Point X="6.312" Y="13.344" />
+        <Point X="8.875" Y="13.344" />
+        <Point X="8.875" Y="1.625" />
+        <Point X="6.25" Y="1.625" />
+        <Point X="6.25" Y="2" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.135" Height="0.182" Width="0.985" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAUAAAAAAAEAACAMgAAQAAIAQBAEACAAEAAAAAAA=</HashCode>
+      <FileName>Models\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UpdateView" />
+      <Property Name="UpdateVieww" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameReviewWebPortal_SOC09109.Models.Review">
+    <Position X="3.75" Y="9.75" Width="1.5" />
+    <AssociationLine Name="UpdateView" Type="GameReviewWebPortal_SOC09109.CopyOfClass1" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.438" Y="11.623" />
+        <Point X="4.438" Y="13.536" />
+        <Point X="9.144" Y="13.536" />
+        <Point X="9.144" Y="1.454" />
+        <Point X="4.562" Y="1.454" />
+        <Point X="4.562" Y="2" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.152" Y="0.135" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAABAAgAEAAAAAAAAAAABgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Review.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UpdateView" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameReviewWebPortal_SOC09109.Class1">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <AssociationLine Name="ExecuteEvents" Type="GameReviewWebPortal_SOC09109.Controllers.AccountsController">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.085" Y="0.377" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExecuteEvents" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameReviewWebPortal_SOC09109.CopyOfClass1">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <AssociationLine Name="ExecuteEvents" Type="GameReviewWebPortal_SOC09109.Controllers.GamesController">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.102" Y="0.377" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExecuteEvents" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameReviewWebPortal_SOC09109.Copy1OfClass1">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <AssociationLine Name="ExecuteEvents" Type="GameReviewWebPortal_SOC09109.Controllers.HomeController">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.127" Y="0.36" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExecuteEvents" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
