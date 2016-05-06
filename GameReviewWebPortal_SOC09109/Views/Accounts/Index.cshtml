@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
+<!--creates a table that all the accounts can be placed into-->
 <table class="table">
     <tr>
         <th>
@@ -27,6 +27,7 @@
         <th></th>
     </tr>
 
+    <!--shows the table with all the information in side of it-->
 @foreach (var item in Model)
 {
     <tr>
@@ -43,11 +44,11 @@
             @Html.DisplayFor(modelItem => item.Admin_Check)
         </td>
         <td>
+            <!--gives the user three options, edit, details, and delete the account-->
             @Html.ActionLink("Edit", "Edit", new { id = item.AccountID }) |
             @Html.ActionLink("Details", "Details", new { id = item.AccountID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.AccountID })
         </td>
     </tr>
 }
-
 </table>

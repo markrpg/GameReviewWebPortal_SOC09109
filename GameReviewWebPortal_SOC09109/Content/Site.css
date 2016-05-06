@@ -28,12 +28,14 @@ h2{
     color: #ff5a09;
 }
 
+/**this is for the third heading. its smaller and has a little padding to make it stand out*/
 h3{
     text-align: center;
     color: #ff5a09;
     padding-top: 0.5em;
 }
 
+/*even smaller heading to allow for fonts to be contrasting*/
 h4{
     background-color: #393939;
     text-align: left;
@@ -41,14 +43,20 @@ h4{
     padding-top: 0.5em;
     
 }
+/*this is for all the white text on the website*/
 h5{
     color: #ffffff;
 }
-
+/*makes the nav bar header text go white*/
 #navbar-header{
     color: #ffffff;
 }
 
+/*this is the wrapper than shapes the screen
+    it sets the width of the overall screen,
+    it will also create the color of the back ground 
+    side bars, contenpanes will all be inside of this wrapper
+*/
 #wrapper
 {
     width: 1280px;
@@ -92,7 +100,7 @@ img.header{
     margin-right: auto;
 	padding: 0px;
 }
-
+/*if hovering over certain text it will change colour to give an effect*/
 li:hover{
     color: #ff5a09;
 }
@@ -115,7 +123,7 @@ div > li > a {
     font-size: 16px;
     color: #ffffff;
 }
-
+/*the footer at the bottom of every page*/
 #footer{
     clear:both;
     height: 40px;

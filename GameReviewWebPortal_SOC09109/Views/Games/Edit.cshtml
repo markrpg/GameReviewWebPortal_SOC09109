@@ -14,17 +14,21 @@
     <div class="form-horizontal">
         <h4>Game</h4>
         <hr />
+        <!--gets the details about the games-->
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.GameID)
 
         <div class="form-group">
+            <!--gets the name of the game-->
+            <!--allows for the data to be edited in the database-->
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--gets the genre of the game-->
+        <!--allows for the data to be edited in the database-->
         <div class="form-group">
             @Html.LabelFor(model => model.Genre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -32,7 +36,8 @@
                 @Html.ValidationMessageFor(model => model.Genre, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--gets the platform of the game-->
+        <!--allows for the data to be edited in the database-->
         <div class="form-group">
             @Html.LabelFor(model => model.Platform, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -40,7 +45,8 @@
                 @Html.ValidationMessageFor(model => model.Platform, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--gets the release date of the game-->
+        <!--allows for the data to be edited in the database-->
         <div class="form-group">
             @Html.LabelFor(model => model.Initial_Release_Date, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -48,7 +54,8 @@
                 @Html.ValidationMessageFor(model => model.Initial_Release_Date, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--gets the publisher of the game-->
+        <!--allows for the data to be edited in the database-->
         <div class="form-group">
             @Html.LabelFor(model => model.Publisher, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -56,7 +63,8 @@
                 @Html.ValidationMessageFor(model => model.Publisher, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--gets the developer of the game-->
+        <!--allows for the data to be edited in the database-->
         <div class="form-group">
             @Html.LabelFor(model => model.Developer, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -64,7 +72,8 @@
                 @Html.ValidationMessageFor(model => model.Developer, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--gets the plot of the game-->
+        <!--allows for the data to be edited in the database-->
         <div class="form-group">
             @Html.LabelFor(model => model.Plot, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -72,7 +81,8 @@
                 @Html.ValidationMessageFor(model => model.Plot, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--gets the rating of the game-->
+        <!--allows for the data to be edited in the database-->
         <div class="form-group">
             @Html.LabelFor(model => model.Rating, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -80,7 +90,8 @@
                 @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--gets the image file of the game-->
+        <!--allows for the data to be edited in the database-->
         <div class="form-group">
             @Html.LabelFor(model => model.ImageName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -95,7 +106,7 @@
         </div>
     </div>
 }
-
+<!--back button-->
 <div>
     @Html.ActionLink("Back to List", "Index", new { email = @Html.Encode(User.Identity.Name)})
 </div>

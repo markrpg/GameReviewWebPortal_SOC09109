@@ -15,6 +15,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            <!--gets all of the users information to display-->
             @Html.DisplayNameFor(model => model.User_Forename)
         </dt>
 
@@ -50,7 +51,6 @@
             <!--Check if user is an admin for access to admin page-->
             @if (Model.Admin_Check == true)
             {
-
                 @Html.ActionLink("Go to Admin Page", "Admin", "Accounts", new { AdminEmail = @Html.Encode(User.Identity.Name) }, new { @class = "navbar-brand" })
             }
         </dd>
@@ -59,9 +59,8 @@
 </div>
 <p>  
     <br />
+    <!--link to allow you edit your profile details-->
     @Html.ActionLink("Edit Your Profile", "Edit", new { id = Model.AccountID })
 
 </p>
-
-
 }

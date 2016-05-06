@@ -44,12 +44,9 @@
                         @Html.TextBox("game")
                     }
                 </div>
-
             </div>
         </div>
-
-    </div>
-    
+    </div>   
     <div class="container body-content" id="wrapper">
         <div id="contentPane">
            <h4>@RenderBody()</h4>
@@ -84,7 +81,6 @@
             </li>
             <!--this is the editors choices (our top 10 games)-->
         </div>
-
         <div id="sidebar">
             <!--Diferent types of Platforms-->
             <h3>Platform</h3>
@@ -101,13 +97,11 @@
                 @Html.ActionLink("PC", "Platform", "Home", new { platform = "PC" }, new { })
             </li>
             </div>
-
             <div id="footer">
                 <footer>
                     <p>&copy; @DateTime.Now.Year - Copyright GRN Game Reviews</p>
                 </footer>
             </div>
-
         </div>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>

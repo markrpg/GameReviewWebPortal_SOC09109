@@ -11,7 +11,9 @@
 <div>
     <h4>Account</h4>
     <hr />
+    <!--gives the user the option t delete the account they have selected-->
     <dl class="dl-horizontal">
+        <!--populates all of the fields with the selected users details-->
         <dt>
             @Html.DisplayNameFor(model => model.User_Forename)
         </dt>
@@ -51,12 +53,10 @@
         <dd>
             @Html.DisplayFor(model => model.Admin_Check)
         </dd>
-
     </dl>
-
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
-
+        <!--the button that will delete the record from the database-->
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")

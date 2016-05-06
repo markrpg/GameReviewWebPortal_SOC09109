@@ -11,6 +11,7 @@
 {
     @Html.AntiForgeryToken()
     
+    <!--this is where all of the blank text boxes are created-->
     <div class="form-horizontal">
         <h4>Game</h4>
         <hr />
@@ -22,7 +23,7 @@
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--asks the user to put in the information for genres, platform, name, rating, and more-->
         <div class="form-group">
             @Html.LabelFor(model => model.Genre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">

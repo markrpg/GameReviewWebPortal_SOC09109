@@ -11,8 +11,10 @@
 {
     <h1>Admin Controls</h1>
     <hr>
+    <!--link to allow you to go to manage all of the game sin the database-->
     <h2>@Html.ActionLink("Game Management", "Index", "Games", new { email = @Html.Encode(User.Identity.Name) }, new { })</h2>
     <hr>
+    <!--link to allow you to go to view all accounts and manage them-->
     <h2>@Html.ActionLink("Account Management", "Index", "Accounts", new { email = @Html.Encode(User.Identity.Name) }, new { })</h2>
 }
 else
