@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameReviewWebPortal_SOC09109", "GameReviewWebPortal_SOC09109\GameReviewWebPortal_SOC09109.csproj", "{F4FE2E04-0AA1-4E1F-A4A7-60CD05E47828}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameReviewWebPortal_SOC09109.Tests", "GameReviewWebPortal_SOC09109.Tests\GameReviewWebPortal_SOC09109.Tests.csproj", "{BBD84367-7854-4CFF-A5E7-155478EBCCBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameReviewWebPortalTests", "GameReviewWebPortalTests\GameReviewWebPortalTests.csproj", "{0213DC12-B69B-44EC-B219-33A121F61811}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F4FE2E04-0AA1-4E1F-A4A7-60CD05E47828}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4FE2E04-0AA1-4E1F-A4A7-60CD05E47828}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4FE2E04-0AA1-4E1F-A4A7-60CD05E47828}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BBD84367-7854-4CFF-A5E7-155478EBCCBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBD84367-7854-4CFF-A5E7-155478EBCCBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBD84367-7854-4CFF-A5E7-155478EBCCBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBD84367-7854-4CFF-A5E7-155478EBCCBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0213DC12-B69B-44EC-B219-33A121F61811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0213DC12-B69B-44EC-B219-33A121F61811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0213DC12-B69B-44EC-B219-33A121F61811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0213DC12-B69B-44EC-B219-33A121F61811}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -72,6 +72,5 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// The games rating
         /// </summary>
         public int Rating { get; set; }
-
     }
 }

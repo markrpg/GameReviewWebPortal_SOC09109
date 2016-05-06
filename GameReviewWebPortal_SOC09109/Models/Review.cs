@@ -37,6 +37,6 @@ namespace GameReviewWebPortal_SOC09109.Models
         /// <summary>
         /// The Reviews game
         /// </summary>
-        public virtual Game Game { get; set; } 
+        public virtual Game Game { get; set; }
     }
 }
