@@ -22,18 +22,6 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         //Local Database Instance
         private Data db = new Data();
 
-        public Account UpdateModel
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
         #region Admin Pages
 
         /// <summary>
@@ -63,12 +51,13 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         /// Admin Page Validator
         /// </summary>
         /// <returns>Returns Account if admin, or error if not</returns>
-        public ActionResult Admin(string AdminEmail)
+        public ActionResult Admin(string adminEmail)
         {
             //Get accounts from DB where the email is current email.
-            var account = db.Accounts.FirstOrDefault(a => a.User_E_Address == AdminEmail);
+            var account = db.Accounts.FirstOrDefault(a => a.User_E_Address == adminEmail);
 
-            if (IsAdmin(AdminEmail))
+            //Checks that the email is an admin email and returns if true, or shows error not found
+            if (IsAdmin(adminEmail))
             {
                 return View(account);
             } else
@@ -268,7 +257,7 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         /// Register page result, validates registration
         /// </summary>
         /// <param name="accountRegister"></param>
-        /// <returns></returns>
+        /// <returns>Returns page after registering if successful</returns>
         [HttpPost]
         public ActionResult Register(Models.Account accountRegister)
         {
@@ -305,10 +294,15 @@ namespace GameReviewWebPortal_SOC09109.Controllers
             return View();
         }
 
-        
+        /// <summary>
+        /// Method used to facilitate logging out a user.
+        /// </summary>
+        /// <returns>Returns Home Page</returns>
         public ActionResult Logout()
         {
+            //Use forms authentication to sign out
             FormsAuthentication.SignOut();
+            //Return home page
             return RedirectToAction("Index", "Home");
         }
    

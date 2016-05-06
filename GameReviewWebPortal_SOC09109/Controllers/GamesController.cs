@@ -21,30 +21,6 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         //Local Database Instance
         private Data db = new Data();
 
-        public Game UpdateModel
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public Review UpdateModell
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
         #region Game Admin
         // GET: Games
         public ActionResult Index(string email)
@@ -99,16 +75,20 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddReview([Bind(Include = "Title,Description")] Review review, int id, string reviewer)
         {
-            if (ModelState.IsValid)
+            //Find game
+            Game game = db.Games.Find(id);
+
+            //If game exists
+            if (game != null)
             {
-                //Find game
-                Game game = db.Games.Find(id);
                 //Set review to game
                 review.Game = game;
                 //Set reviewer email to review
                 review.Reviewer = reviewer;
                 db.Reviews.Add(review);
                 db.SaveChanges();
+                //Return to game page
+                return View(game);
             }
             return null;
         }

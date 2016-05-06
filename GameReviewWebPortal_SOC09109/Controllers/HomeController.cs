@@ -17,18 +17,6 @@ namespace GameReviewWebPortal_SOC09109.Controllers
         //Local Database Instance
         private Data db = new Data();
 
-        public Models.Game UpdateModel
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
         // GET: Home
         public ActionResult Index()
         {
